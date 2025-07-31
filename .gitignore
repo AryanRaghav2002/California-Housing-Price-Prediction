@@ -1,0 +1,14 @@
+# Ignore model files
+model.pkl
+pipline.pkl
+input.csv
+output_data.csv
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
