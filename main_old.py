@@ -90,4 +90,11 @@ random_forest_reg_pred=random_forest_reg_model.predict(housing_prepared)
 random_forest_reg_rmses= -cross_val_score(random_forest_reg_model, housing_prepared, housing_labels, scoring="neg_root_mean_squared_error", cv=10
                               )
 # print(f"The root mean squared error for Random Forest regressor is {random_forest_reg_rmse}")
+
+# Output:
+#         (16512, 13)
+#     After Cross validation Linear rmse: 69204.32275494764
+#     After Cross validation Decision tree rmse: 69318.85112765571
+#     After Cross validation Random forest rmse: 49393.923744988846
+
 print(f"After Cross validation Random forest rmse: {pd.Series(random_forest_reg_rmses).mean()}") # Since it runs on multiple data((k-1) i.e 9)
